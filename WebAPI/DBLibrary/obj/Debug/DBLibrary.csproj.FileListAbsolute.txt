@@ -1,0 +1,7 @@
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\bin\Debug\DBLibrary.dll
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\bin\Debug\DBLibrary.pdb
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\bin\Debug\log4net.dll
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\bin\Debug\MySql.Data.DLL
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\bin\Debug\log4net.xml
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\obj\Debug\DBLibrary.dll
+D:\Mocero Health Solutions\Task\WebAPI\DBLibrary\obj\Debug\DBLibrary.pdb

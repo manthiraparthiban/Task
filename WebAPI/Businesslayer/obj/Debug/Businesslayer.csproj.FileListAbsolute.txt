@@ -1,0 +1,14 @@
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\Businesslayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\Businesslayer.pdb
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\DataAccessLayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\EntityLayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\log4net.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\DBLibrary.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\MySql.Data.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\DataAccessLayer.pdb
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\EntityLayer.pdb
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\log4net.xml
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\bin\Debug\DBLibrary.pdb
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\obj\Debug\Businesslayer.csprojResolveAssemblyReference.cache
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\obj\Debug\Businesslayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\Businesslayer\obj\Debug\Businesslayer.pdb

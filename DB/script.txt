@@ -1,0 +1,95 @@
+create schema test;
+
+CREATE TABLE `user` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `user_code` varchar(45) NOT NULL,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email_id` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `status` int DEFAULT NULL COMMENT '1. active\n0. not active',
+  `created_on` datetime DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE DEFINER=`root`@`%` PROCEDURE `SP_LoginVerification`(`P_user_name` varchar(45), `P_password` varchar(45))
+BEGIN
+
+/* Login Verification SP 
+   Date: 2021/11/13
+   Developer: Manthira Parthiban
+*/
+IF Exists(select user_code from user where binary email_id=P_user_name)then
+IF Exists(select user_code from user where binary email_id=P_user_name and binary password=P_password and status=1)then
+select "1" as msg,user_code,email_id,password,concat(first_name," ", last_name) as name from user where binary email_id=P_user_name and binary password=P_password and status=1;
+else
+select "0" as msg;
+END IF;
+else 
+select "invalid_user" as msg;
+END IF;
+
+END
+
+
+
+CREATE DEFINER=`root`@`%` PROCEDURE `SP_Register`(`P_firstname` varchar(45), `P_lastname` varchar(45), `P_email_id` varchar(45), `P_password` varchar(45))
+BEGIN
+
+/* User Register SP 
+   Date: 2021/11/13
+   Developer: Manthira Parthiban
+*/
+
+IF Exists(select user_code from user where email_id = P_email_id)then
+select "0" as msg;
+else
+insert into user(user_code,first_name,last_name,email_id,password,status,created_on)
+values(UserCode(),P_firstname,P_lastname,P_email_id,P_password,1,now());
+select "1" as msg;
+END IF;
+
+END
+
+
+CREATE DEFINER=`root`@`%` PROCEDURE `SP_ChangePassword`(`P_email_id` varchar(45), `P_user_code` varchar(45), `P_old_password` varchar(45), `P_new_password` varchar(45))
+BEGIN
+
+/* Change Password SP 
+   Date: 2021/11/13
+   Developer: Manthira Parthiban
+*/
+
+IF Exists(select user_code from user where binary email_id=P_email_id and binary password=P_old_password and status=1)then
+Update user set password = P_new_password where binary email_id=P_email_id and binary password=P_old_password and status=1;
+select "1" as msg,user_code,email_id,password,concat(first_name," ", last_name) as name from user where binary email_id=P_email_id and binary password=P_new_password and user_code=P_user_code and status=1;
+else
+select "0" as msg;
+END IF;
+
+END
+
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` FUNCTION `UserCode`() RETURNS varchar(45) CHARSET latin1
+BEGIN
+Declare autoID varchar(45) default '';
+Declare getLastID varchar(45);
+Declare getID integer default 0;
+   IF  (Select count(*) from user where user_code like '%USD%') then
+    Begin
+     select substring(max(user_code),4,50) into getLastID from user where user_code like '%USD%';
+	 select convert(getLastID ,signed integer) into getID ;
+     set getID=getID+1;
+     select concat('USD',Lpad(convert(getID,char(50)),5,0)) into autoID ;
+	end;
+   ELSE
+      Begin
+      set autoID='USD00001';
+	  end;
+   END IF;
+
+RETURN autoID;
+END$$
+DELIMITER ;

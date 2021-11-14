@@ -1,0 +1,557 @@
+﻿.progress-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        margin: 0 0 10px 0;
+    }
+
+    .progress .progress-bar {
+        position: relative;
+        animation: animate-positive 1s;
+    }
+
+    .progress .progress-value {
+        display: block;
+        font-size: 13px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 8px;
+    }
+
+    
+
+    @-webkit-keyframes animate-positive {
+        0% {
+            width: 0%;
+        }
+    }
+
+    @keyframes animate-positive {
+        0% {
+            width: 0%;
+        }
+    }
+
+    .box-m {
+        min-height: 321px;
+    }
+@media only screen and (max-width: 767px) and (orientation:portrait){
+    .box-m {
+        min-height: 260px;
+    }
+}
+    /*tr {
+        width: 100%;
+        display: inline-table;
+    }*/
+
+    .ar-g {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .tab-content {
+        padding: 0px !important;
+    }
+
+    .tab-pane {
+        padding: 0px 0 !important;
+    }
+
+    .performer-h {
+        padding: 3px !important;
+    }
+
+    .nav-tabs-custom {
+        margin-bottom: 0px !important;
+        background: #fff;
+        box-shadow: none;
+    }
+
+
+     #tbl-medicine tr, #DiagnosticsTestTable_1 tr{
+        text-transform:uppercase;
+    }
+
+/*video call start*/
+
+     videocallnew .modal-content.ui-resizable {
+    overflow: initial;
+}
+
+div#videocallnew iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#videocallnew .modal-body {
+    height: 80%;
+}
+
+div#videocallnew {
+    background: transparent !important;
+    pointer-events: none;
+}
+
+    div#videocallnew .modal-dialog {
+        pointer-events: auto;
+    }
+
+
+.head-video-wap-popup.open {
+    bottom: -183px;
+}
+
+.head-video-wap-popup {
+    position: fixed;
+    right: 25px;
+    bottom: -301px;
+    width: 254px;
+    background: white;
+    z-index: 99;
+    border: 1px solid #afafaf99;
+    transition: transform 0.3s ease-in-out 0s, bottom 0.3s ease-in-out 0s;
+}
+
+    .head-video-wap-popup.open {
+        bottom: 0px;
+    }
+
+.head-video-wap-popup {
+    pointer-events: auto;
+}
+
+.head-video-title {
+    padding: 8px 10px;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 17px;
+    background-color: #4fd41f;
+    color: #fff;
+}
+
+/*.head-video-wap-popup:hover .head-video-title {
+    background-color: #fff;
+    color: black !important;
+}*/
+
+button.addpatientvideo {
+    position: absolute;
+    right: 38px;
+    top: 15px;
+    border: 0;
+    background: #4fd41f;
+    color: white;
+    border-radius: 30px;
+    cursor:pointer;
+}
+
+button.cus-video-close-btn {
+    color: black;
+    opacity: 1;
+    padding-top: 2px;
+}
+button#btnsendmsg {
+    margin-bottom: 14px;
+}
+button.close.cus-videopop-close-btn {
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    color: white;
+    opacity: 1;
+}
+.right-box-video .modal-dialog{
+    position: fixed;
+    right: 94px;
+    top: 190px;
+    width: 343px;
+}
+.right-box-video .modal-content.ui-resizable {
+    height: 388px;
+}
+
+.top-box-video .modal-dialog {
+    position: fixed;
+    right: 9%;
+    top: -10px;
+    width: 943px;
+}
+.top-box-video .modal-content.ui-resizable {
+    height: 388px;
+}
+button#videoresizecus {
+    position: absolute;
+    right: 74px;
+    top: 15px;
+    border: 0;
+    background: #e3e3e3;
+    color: #7b7b7b;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/*feedback*/
+.feedbackvideo {
+    --normal: #eceaf3;
+    --normal-shadow: #d9d8e3;
+    --normal-mouth: #9795a4;
+    --normal-eye: #595861;
+    --active: #f8da69;
+    --active-shadow: #f4b555;
+    --active-mouth: #f05136;
+    --active-eye: #313036;
+    --active-tear: #76b5e7;
+    --active-shadow-angry: #e94f1d;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+    .feedbackvideo li {
+        position: relative;
+        border-radius: 50%;
+        background: var(--sb, var(--normal));
+        box-shadow: inset 3px -3px 4px var(--sh, var(--normal-shadow));
+        transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+        .feedbackvideo li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .feedbackvideo li div {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            transform: perspective(240px) translateZ(4px);
+        }
+
+            .feedbackvideo li div svg, .feedbackvideo li div:before, .feedbackvideo li div:after {
+                display: block;
+                position: absolute;
+                left: var(--l, 9px);
+                top: var(--t, 13px);
+                width: var(--w, 8px);
+                height: var(--h, 2px);
+                transform: rotate(var(--r, 0deg)) scale(var(--sc, 1)) translateZ(0);
+            }
+
+            .feedbackvideo li div svg {
+                fill: none;
+                stroke: var(--s);
+                stroke-width: 2px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                transition: stroke 0.4s;
+            }
+
+                .feedbackvideo li div svg.eye {
+                    --s: var(--e, var(--normal-eye));
+                    --t: 17px;
+                    --w: 7px;
+                    --h: 4px;
+                }
+
+                    .feedbackvideo li div svg.eye.right {
+                        --l: 23px;
+                    }
+
+                .feedbackvideo li div svg.mouth {
+                    --s: var(--m, var(--normal-mouth));
+                    --l: 11px;
+                    --t: 23px;
+                    --w: 18px;
+                    --h: 7px;
+                }
+
+            .feedbackvideo li div:before, .feedbackvideo li div:after {
+                content: '';
+                z-index: var(--zi, 1);
+                border-radius: var(--br, 1px);
+                background: var(--b, var(--e, var(--normal-eye)));
+                transition: background 0.4s;
+            }
+
+        .feedbackvideo li.angry {
+            --step-1-rx: -24deg;
+            --step-1-ry: 20deg;
+            --step-2-rx: -24deg;
+            --step-2-ry: -20deg;
+        }
+
+            .feedbackvideo li.angry div:before {
+                --r: 20deg;
+            }
+
+            .feedbackvideo li.angry div:after {
+                --l: 23px;
+                --r: -20deg;
+            }
+
+            .feedbackvideo li.angry div svg.eye {
+                stroke-dasharray: 4.55;
+                stroke-dashoffset: 8.15;
+            }
+
+            .feedbackvideo li.angry.active {
+                animation: angry 1s linear;
+            }
+
+                .feedbackvideo li.angry.active div:before {
+                    --middle-y: -2px;
+                    --middle-r: 22deg;
+                    animation: toggle 0.8s linear forwards;
+                }
+
+                .feedbackvideo li.angry.active div:after {
+                    --middle-y: 1px;
+                    --middle-r: -18deg;
+                    animation: toggle 0.8s linear forwards;
+                }
+
+        .feedbackvideo li.sad {
+            --step-1-rx: 20deg;
+            --step-1-ry: -12deg;
+            --step-2-rx: -18deg;
+            --step-2-ry: 14deg;
+        }
+
+            .feedbackvideo li.sad div:before, .feedbackvideo li.sad div:after {
+                --b: var(--active-tear);
+                --sc: 0;
+                --w: 5px;
+                --h: 5px;
+                --t: 15px;
+                --br: 50%;
+            }
+
+            .feedbackvideo li.sad div:after {
+                --l: 25px;
+            }
+
+            .feedbackvideo li.sad div svg.eye {
+                --t: 16px;
+            }
+
+            .feedbackvideo li.sad div svg.mouth {
+                --t: 24px;
+                stroke-dasharray: 9.5;
+                stroke-dashoffset: 33.25;
+            }
+
+            .feedbackvideo li.sad.active div:before, .feedbackvideo li.sad.active div:after {
+                animation: tear 0.6s linear forwards;
+            }
+
+        .feedbackvideo li.ok {
+            --step-1-rx: 4deg;
+            --step-1-ry: -22deg;
+            --step-1-rz: 6deg;
+            --step-2-rx: 4deg;
+            --step-2-ry: 22deg;
+            --step-2-rz: -6deg;
+        }
+
+            .feedbackvideo li.ok div:before {
+                --l: 12px;
+                --t: 17px;
+                --h: 4px;
+                --w: 4px;
+                --br: 50%;
+                box-shadow: 12px 0 0 var(--e, var(--normal-eye));
+            }
+
+            .feedbackvideo li.ok div:after {
+                --l: 13px;
+                --t: 26px;
+                --w: 14px;
+                --h: 2px;
+                --br: 1px;
+                --b: var(--m, var(--normal-mouth));
+            }
+
+            .feedbackvideo li.ok.active div:before {
+                --middle-s-y: 0.35;
+                animation: toggle 0.2s linear forwards;
+            }
+
+            .feedbackvideo li.ok.active div:after {
+                --middle-s-x: 0.5;
+                animation: toggle 0.7s linear forwards;
+            }
+
+        .feedbackvideo li.good {
+            --step-1-rx: -14deg;
+            --step-1-rz: 10deg;
+            --step-2-rx: 10deg;
+            --step-2-rz: -8deg;
+        }
+
+            .feedbackvideo li.good div:before {
+                --b: var(--m, var(--normal-mouth));
+                --w: 5px;
+                --h: 5px;
+                --br: 50%;
+                --t: 22px;
+                --zi: 0;
+                opacity: 0.5;
+                box-shadow: 16px 0 0 var(--b);
+                filter: blur(2px);
+            }
+
+            .feedbackvideo li.good div:after {
+                --sc: 0;
+            }
+
+            .feedbackvideo li.good div svg.eye {
+                --t: 15px;
+                --sc: -1;
+                stroke-dasharray: 4.55;
+                stroke-dashoffset: 8.15;
+            }
+
+            .feedbackvideo li.good div svg.mouth {
+                --t: 22px;
+                --sc: -1;
+                stroke-dasharray: 13.3;
+                stroke-dashoffset: 23.75;
+            }
+
+            .feedbackvideo li.good.active div svg.mouth {
+                --middle-y: 1px;
+                --middle-s: -1;
+                animation: toggle 0.8s linear forwards;
+            }
+
+        .feedbackvideo li.happy div {
+            --step-1-rx: 18deg;
+            --step-1-ry: 24deg;
+            --step-2-rx: 18deg;
+            --step-2-ry: -24deg;
+        }
+
+            .feedbackvideo li.happy div:before {
+                --sc: 0;
+            }
+
+            .feedbackvideo li.happy div:after {
+                --b: var(--m, var(--normal-mouth));
+                --l: 11px;
+                --t: 23px;
+                --w: 18px;
+                --h: 8px;
+                --br: 0 0 8px 8px;
+            }
+
+            .feedbackvideo li.happy div svg.eye {
+                --t: 14px;
+                --sc: -1;
+            }
+
+        .feedbackvideo li.happy.active div:after {
+            --middle-s-x: 0.95;
+            --middle-s-y: 0.75;
+            animation: toggle 0.8s linear forwards;
+        }
+
+        .feedbackvideo li:not(.active) {
+            cursor: pointer;
+        }
+
+            .feedbackvideo li:not(.active):active {
+                transform: scale(0.925);
+            }
+
+        .feedbackvideo li.active {
+            --sb: var(--active);
+            --sh: var(--active-shadow);
+            --m: var(--active-mouth);
+            --e: var(--active-eye);
+        }
+
+            .feedbackvideo li.active div {
+                animation: headshaked 0.8s linear forwards;
+            }
+
+@keyframes headshaked {
+    30% {
+        transform: perspective(240px) rotateX(var(--step-1-rx, 0deg)) rotateY(var(--step-1-ry, 0deg)) rotateZ(var(--step-1-rz, 0deg)) translateZ(10px);
+    }
+
+    60% {
+        transform: perspective(240px) rotateX(var(--step-2-rx, 0deg)) rotateY(var(--step-2-ry, 0deg)) rotateZ(var(--step-2-rz, 0deg)) translateZ(10px);
+    }
+
+    100% {
+        transform: perspective(240px) translateZ(4px);
+    }
+}
+
+@keyframes tear {
+    0% {
+        opacity: 0;
+        transform: translateY(-2px) scale(0) translateZ(0);
+    }
+
+    50% {
+        transform: translateY(12px) scale(0.6, 1.2) translateZ(0);
+    }
+
+    20%, 80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(24px) translateX(4px) rotateZ(-30deg) scale(0.7, 1.1) translateZ(0);
+    }
+}
+
+@keyframes toggle {
+    50% {
+        transform: translateY(var(--middle-y, 0)) scale(var(--middle-s-x, var(--middle-s, 1)), var(--middle-s-y, var(--middle-s, 1))) rotate(var(--middle-r, 0deg));
+    }
+}
+
+@keyframes angry {
+    40% {
+        background: var(--active);
+    }
+
+    45% {
+        box-shadow: inset 3px -3px 4px var(--active-shadow), inset 0 8px 10px var(--active-shadow-angry);
+    }
+}
+
+.feedback-react-head {
+    max-width: 280px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#feedback_popup .us-dpe-bg-head span {
+    background-color: #d4d1d1;
+    color: #060606;
+    font-size: 12px;
+    border: 1px solid #c5c5c5;
+}
+#feedback_popup .us-dpe-bg-head [type=radio]:checked + span {
+    background: #0065b3;
+    color: white;
+    padding: 8px 7px;
+}
+@media screen and (max-width:767px) {
+    #feedback_popup .us-dpe-bg-head .radio-inline {
+        padding-left: 0px;
+        margin-bottom: 27px;
+        width: 100%;
+        text-align: center;
+    }
+}
+/*feedback end*/
+/*video call end*/

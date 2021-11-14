@@ -1,0 +1,6 @@
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\bin\Debug\EntityLayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\bin\Debug\EntityLayer.pdb
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\bin\Debug\log4net.dll
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\bin\Debug\log4net.xml
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\obj\Debug\EntityLayer.dll
+D:\Mocero Health Solutions\Task\WebAPI\EntityLayer\obj\Debug\EntityLayer.pdb

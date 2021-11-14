@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/Content/css/styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="loginpagecls">
+        <div class="title">Login</div>
+        <div class="input-box underline">
+            <input type="text" placeholder="Enter Your Email" id="txtusername" required>
+            <div class="underline"></div>
+            <p id="Ptxtusername" style="color:red"></p>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Enter Your Password" id="txtPassword" required>
+            <div class="underline"></div>
+            <p id="PtxtPassword" style="color:red"></p>
+        </div>
+        <div class="input-box button">
+            <input type="submit" name="" value="Continue" id="btnSignIn">
+            <p id="PbtnSignIn" style="color:red"></p>
+        </div>
+        <div class="option">or</div>
+        <div class="input-box button">
+            <a href="/Home/Register" type="submit" name="" value="Register">Register </a>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    html, body {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        background-image: url("/Content/img/loginpage_bg.jpg");
+    }
+</style>
+
+<!-- jQuery 3 -->
+<script src="~/Content/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="~/Content/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="~/Content/js/icheck.min.js"></script>
+<!-- Application JS -->
+<script src="~/Content/js/ApplicationJs/Home.js?v=0000000000000001"></script>
